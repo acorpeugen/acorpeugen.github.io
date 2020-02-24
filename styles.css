@@ -1,0 +1,373 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-size: 87.5%;
+  line-height: 1.5;
+  color: #000;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute and remove default padding */
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  color: #2196f3;
+  text-decoration-skip-ink: auto;
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+article {
+  margin-bottom: 34px;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+small {
+  font-size: .75rem;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  display: flex;
+  align-items: flex-start;
+  flex: 0 0 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.avatar img {
+  pointer-events: none;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Helper classes */
+.main {
+  padding-top: 40px;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col-md-6,
+.col-md-5 {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.history-list li,
+.courses-list li,
+.details-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+/* Title with icons */
+.article-title {
+  background-position: 0 2px;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  padding-left: 34px;
+}
+
+.person-title {
+  background-image: url(img/person.svg);
+}
+
+.history-title {
+  background-image: url(img/history.svg);
+}
+
+.education-title,
+.courses-title {
+  background-image: url(img/school.svg);
+}
+
+.details-title {
+  background-image: url(img/details.svg);
+}
+
+.languages-title {
+  background-image: url(img/language.svg);
+}
+
+.websites-title {
+  background-image: url(img/link.svg);
+}
+
+.date {
+  display: block;
+  font-weight: 500;
+  color: #a5a5a5;
+  margin-bottom: .25rem;
+}
+
+/* Details */
+.details-list li {
+  margin-bottom: 1rem;
+}
+
+/* Skills list */
+.skill-list li {
+  margin-bottom: 20px;
+}
+
+.skill-title {
+  background-image: url(img/skills.svg);
+}
+
+.skill-name {
+  display: block;
+  margin-bottom: .5rem;
+}
+
+/* Progress */
+.progress {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+
+.progress::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #2196f3;
+}
+
+.progress.novice::before {
+  width: 20%;
+}
+
+.progress.beginner::before {
+  width: 40%;
+}
+
+.progress.skillful::before {
+  width: 60%;
+}
+
+.progress.experienced::before {
+  width: 80%;
+}
+
+.progress.expert::before {
+  width: 100%;
+}
+
+.progress-notification {
+  color: #a5a5a5;
+  font-size: .875rem;
+}
+
+/* Portfolio navigation */
+.portfolio-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Media small */
+@media (min-width: 576px) {
+
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium media */
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 720px;
+  }
+
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Large media */
+@media (min-width: 992px) {
+
+  body {
+    font-size: 100%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  small {
+    font-size: .875rem;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+
+  .col-lg-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+
+  .offset-lg-1 {
+    margin-left: 8.33333%;
+  }
+
+  .avatar {
+    flex: 0 0 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  .article-title {
+    background-position: 0 6px;
+  }
+}
+
+/* Extra large media */
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* The hover CSS media feature can be used to test whether the user's primary input mechanism can hover over elements */
+@media (hover: hover) {
+  a:not([class]):hover {
+    text-decoration: underline;
+  }
+}
