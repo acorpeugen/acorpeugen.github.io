@@ -181,11 +181,11 @@ header .container {
 }
 
 .person-title {
-  background-image: url(img/profile.svg);
+  background-image: url(img/person.svg);
 }
 
 .history-title {
-  background-image: url(img/time.svg);
+  background-image: url(img/history.svg);
 }
 
 .education-title,
@@ -193,8 +193,16 @@ header .container {
   background-image: url(img/school.svg);
 }
 
+.systems-title {
+  background-image: url(img/computer.svg);
+}
+
 .details-title {
-  background-image: url(img/details.svg);
+  background-image: url(img/contacts.svg);
+}
+
+.hobbies-title {
+  background-image: url(img/hobbies.svg);
 }
 
 .languages-title {
