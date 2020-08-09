@@ -181,11 +181,11 @@ header .container {
 }
 
 .person-title {
-  background-image: url(img/person.svg);
+  background-image: url(img/profile.svg);
 }
 
 .history-title {
-  background-image: url(img/history.svg);
+  background-image: url(img/time.svg);
 }
 
 .education-title,
